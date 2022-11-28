@@ -95,7 +95,7 @@ async function run() {
       next();
     };
 
-    //! new for bike add to db by seller
+    // new for bike add to db by seller
     app.post("/allbikes", async (req, res) => {
       const bike = req.body;
       const result = await allBikesCollection.insertOne(bike);
