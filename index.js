@@ -390,26 +390,6 @@ async function run() {
       const result = await allBikesCollection.deleteOne(filter);
       res.send(result);
     });
-
-    //স্পেসিফিক ডাটা গেট করার জন্য service id unojie. jeta mdb te save  koorce{reviews own}
-    app.get("/myreviews", verifyJWT, async (req, res) => {
-      const decoded = req.decoded;
-
-      if (decoded.email !== req.query.email) {
-        res.status(403).send({ message: "unauthorized access" });
-      }
-      let query = {};
-      if (req.query.email) {
-        query = {
-          email: req.query.email,
-        };
-      }
-
-      const cursor = reviewCollection.find(query); // colection er help nea cursor banalam khujar jonno data ta computer er cursor er moto kore. akhne findone use korce akta khujtese tai
-      const reviews = await cursor.toArray(); // cursor er sahajje data ta  anlam. akhne to array korte hoine cause ata akta element only
-      res.send(reviews); // data ta pathia delam response hisabe|
-    });
-    //end
   } finally {
   }
 }
