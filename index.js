@@ -61,7 +61,7 @@ async function run() {
     const wishlistCollection = client.db("bikeBazaar").collection("wishlist");
     const paymentsCollection = client.db("bikeBazaar").collection("payments");
 
-    //!new NOTE: make sure you use {verifyAdmin} after verifyJWT
+    //new NOTE: make sure you use {verifyAdmin} after verifyJWT
     const verifyAdmin = async (req, res, next) => {
       const decodedEmail = req.decoded.email;
       const query = { email: decodedEmail };
