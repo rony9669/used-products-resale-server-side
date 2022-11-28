@@ -107,7 +107,7 @@ async function run() {
       const result = await allBikesCollection.find(query).toArray();
       res.send(result);
     });
-    //! new for bike get from db by seller my product page using transtec query/react query
+    // new for bike get from db by seller my product page using transtec query/react query
     app.get("/allbikes/myproduct", async (req, res) => {
       const email = req.query.email;
       // console.log(email);
