@@ -101,7 +101,7 @@ async function run() {
       const result = await allBikesCollection.insertOne(bike);
       res.send(result);
     });
-    //! new for get advertise data {Problem}
+    // new for get advertise data {Problem}
     app.get("/allbikes", async (req, res) => {
       const query = { advertise: "on" };
       const result = await allBikesCollection.find(query).toArray();
