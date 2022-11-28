@@ -72,7 +72,7 @@ async function run() {
       }
       next();
     };
-    //!new NOTE: make sure you use {verifySeller} after verifyJWT
+    //new NOTE: make sure you use {verifySeller} after verifyJWT
     const verifySeller = async (req, res, next) => {
       const decodedEmail = req.decoded.email;
       const query = { email: decodedEmail };
