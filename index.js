@@ -115,10 +115,9 @@ async function run() {
       const result = await allBikesCollection.find(query).toArray();
       res.send(result);
     });
-    //!new for geting all bikes by name
+    //new for geting all bikes by name
     app.get("/category", async (req, res) => {
-      
-      const query = { };
+      const query = {};
       const result = await categoryCollection.find(query).toArray();
       res.send(result);
     });
