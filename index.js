@@ -121,7 +121,7 @@ async function run() {
       const result = await categoryCollection.find(query).toArray();
       res.send(result);
     });
-    //!new for geting all bikes by name
+    //new for geting all bikes by name
     app.get("/categoryDetails/:name", async (req, res) => {
       const name = req.params.name;
       const query = { name };
