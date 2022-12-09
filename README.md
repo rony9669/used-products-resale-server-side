@@ -1,4 +1,4 @@
-# Project Title: Mishu's Kitchen Server Side Code
+# Project Title: Bike Bazar server side
 
 ## Live website link: https://bikebazzar-ccd7b.web.app/
 
